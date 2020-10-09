@@ -4,8 +4,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
-//@Table(name = "USER")
+// 201009 엔티티 맵핑
+@Entity(name ="Member") // JPA가 내부적으로 구분하는 이름, 기본값을 사용해야한다.
+//@Table(name = "USER") // DB TABLE 명(USER) 이랑 맵핑
 public class Member {
 
     @Id
