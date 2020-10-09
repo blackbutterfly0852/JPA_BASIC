@@ -5,7 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import java.util.List;
-
+// 201008 JPA 소개
 public class JpaMain {
 
     public static void main(String[] args) {
