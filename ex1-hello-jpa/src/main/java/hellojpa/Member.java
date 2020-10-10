@@ -1,8 +1,7 @@
 package hellojpa;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Date;
 
 // 201009 엔티티 맵핑
 @Entity(name ="Member") // JPA가 내부적으로 구분하는 이름, 기본값을 사용해야한다.
@@ -29,4 +28,6 @@ public class Member {
     public void setName(String name) {
         this.name = name;
     }
+
+
 }

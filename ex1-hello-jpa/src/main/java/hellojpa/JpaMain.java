@@ -45,9 +45,9 @@ public class JpaMain {
                     //.setMaxResults(8)
                     .getResultList();
 
-             for(Member member : members){
-                 System.out.println(member.getId() + " " + member.getName());
-             }
+//             for(Member member : members){
+//                 System.out.println(member.getId() + " " + member.getName());
+//             }
 
         } catch(Exception e){
             tx.rollback();
