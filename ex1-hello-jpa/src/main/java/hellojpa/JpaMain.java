@@ -31,7 +31,7 @@ public class JpaMain {
             // Member updateMember = em.find(Member.class,1L);
             // updateMember.setName("helloB");
             // tx.commit();
-            // em.persis(updateMember) 작성 X
+            // em.persist(updateMember) 작성 X
             // JPA를 통해서 엔티티를 가져오면, JPA가 관리
             // 커밋 시점에 변경되었는지 체크 -> 변경되었으면 자동 UPDATE
 
@@ -58,8 +58,6 @@ public class JpaMain {
 
         // 6. EntityManagerFactory 종료
         emf.close();
-
-
 
     }
 }

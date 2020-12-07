@@ -1,37 +1,53 @@
 package hellojpa;
 
+
+
 import javax.persistence.*;
+import javax.persistence.EntityTransaction;
 
 
 public class JpaMain_Practice {
 
     public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
 
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
         EntityManager em = emf.createEntityManager();
-        EntityTransaction tx = em.getTransaction();
+        EntityTransaction tx =  em.getTransaction();
         tx.begin();
 
-
-
         try{
-            Member member = new Member();
-            member.setId(100L);
-            member.setName("김동우");
-            em.persist(member);
-            tx.commit();
-            //em.clear();
+//            // 1. 비영속 상태(new)
+//            Member createMember = new Member();
+//            createMember.setId(1L);
+//            createMember.setName("hello1");
+//
+//            // 2. 영속 상태(managed)
+//            em.persist(createMember);
+//            //tx.commit();
+//
+//            // 3. 준영속 상태(detached)
+//            Member findMember1 = em.find(Member.class, 1L);
+//            System.out.println("============================");
+//            //em.close(); // 오류
+//            //em.clear();
+//            em.detach(createMember);
+//            Member findMember2 = em.find(Member.class, 1L);
+//
+//            // 4. 삭제(remove)
+//            //em.remove(createMember);
 
-            System.out.println("============================");
-            Member findMember = em.find(Member.class,100L);
-            findMember.setName("김정우");
+            Member memberA = new Member();
+            memberA.setId(2L);
+            memberA.setName("hello2");
+            em.persist(memberA);
+            em.flush(); // insert 쿼리 강제로 발생
             tx.commit();
+
 
         }catch (Exception e){
             tx.rollback();
         }finally {
             em.close();
-
         }
         emf.close();
 
