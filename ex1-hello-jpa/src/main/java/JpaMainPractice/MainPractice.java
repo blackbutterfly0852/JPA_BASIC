@@ -1,12 +1,14 @@
-package hellojpa;
+package JpaMainPractice;
 
 
+
+import hellojpa.Member;
 
 import javax.persistence.*;
 import javax.persistence.EntityTransaction;
 
 
-public class JpaMain_Practice {
+public class MainPractice {
 
     public static void main(String[] args) {
 
@@ -37,8 +39,8 @@ public class JpaMain_Practice {
 //            //em.remove(createMember);
 
             Member memberA = new Member();
-            memberA.setId(2L);
-            memberA.setName("hello2");
+            memberA.setId(3L);
+            memberA.setName("hello3");
             em.persist(memberA);
             em.flush(); // insert 쿼리 강제로 발생
             tx.commit();

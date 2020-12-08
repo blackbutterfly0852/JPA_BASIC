@@ -40,7 +40,7 @@ public class JpaMain {
 
             // 3-4. JPQL : 테이블이 아닌, 객체를 대상으로 조회
             // 이점 : 페이징
-            List<Member> members = em.createQuery("select m from Member m", Member.class)
+            List<Member> members = em.createQuery("select m from IdentityMember m", Member.class)
                     //.setFirstResult(1)
                     //.setMaxResults(8)
                     .getResultList();

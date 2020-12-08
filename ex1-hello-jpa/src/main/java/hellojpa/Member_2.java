@@ -11,7 +11,7 @@ public class Member_2 {
     @Id
     private Long id;
     // 객체는 username으로 사용하고, 컬럼은 name으로 사용한다.
-    @Column(name = "name" , insertable = true, updatable = false, nullable = false) // update X , not null
+    @Column(name = "name" , insertable = true, updatable = false, nullable = false, unique = true) // update X , not null
     private String username;
     private Integer age;
     // DB에는 Enumerated 타입 X
