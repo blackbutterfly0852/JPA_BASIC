@@ -22,7 +22,7 @@ public class JpaMain {
             // 3. Member 객체 생성
             Member createMember = new Member();
             // createMember.setId(1L);
-            createMember.setName("helloA");
+            createMember.setName("김동우");
 
             // 3. Member 객체 저장 및 트랜잭션 커밋
             em.persist(createMember);
