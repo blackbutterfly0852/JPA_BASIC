@@ -1,10 +1,10 @@
-package hellojpa;
+package persistencePractice;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import java.util.List;
+
 // 201009 영속성 관리 - 내부 동작 방식
 public class JpaMain_2 {
 

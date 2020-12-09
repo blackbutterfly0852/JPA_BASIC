@@ -1,4 +1,4 @@
-package hellojpa;
+package persistencePractice;
 
 public enum RoleType {
     USER, ADMIN

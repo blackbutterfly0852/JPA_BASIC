@@ -1,4 +1,4 @@
-package keyGeneratePractice;
+package mappingPractice;
 
 import javax.persistence.*;
 

@@ -1,8 +1,6 @@
-package JpaMainPractice;
+package persistencePractice;
 
 
-
-import hellojpa.Member;
 
 import javax.persistence.*;
 import javax.persistence.EntityTransaction;
