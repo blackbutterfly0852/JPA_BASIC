@@ -1,16 +1,18 @@
-package persistencePractice;
+package proxyPractice;
 
 import javax.persistence.*;
 
-// 201009 엔티티 맵핑
-@Entity(name ="Member") // JPA가 내부적으로 구분하는 이름, 기본값을 사용해야한다.
-//@Table(name = "USER") // DB TABLE 명(USER) 이랑 맵핑
-public class Member {
+@Entity
+public class Child {
 
     @Id
+    @GeneratedValue
     private Long id;
-    //@Column(name = "userName")
     private String name;
+
+    @ManyToOne
+    @JoinColumn(name = "PARENT_ID")
+    private Parent parent;
 
     public Long getId() {
         return id;
@@ -28,5 +30,11 @@ public class Member {
         this.name = name;
     }
 
+    public Parent getParent() {
+        return parent;
+    }
 
+    public void setParent(Parent parent) {
+        this.parent = parent;
+    }
 }

@@ -36,7 +36,7 @@ public class MainPractice {
 //            // 4. 삭제(remove)
 //            //em.remove(createMember);
 
-            Member memberA = new Member();
+            persistenceMember memberA = new persistenceMember();
             memberA.setId(3L);
             memberA.setName("hello3");
             em.persist(memberA);
