@@ -46,4 +46,31 @@ public class Order {
     public void setAddress(Address address) {
         this.address = address;
     }
+
+    public Member getMember() {
+        return member;
+    }
+
+    public void setMember(Member member) {
+        this.member = member;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", orderAmount=" + orderAmount +
+                ", member=" + member +
+                ", product=" + product +
+                ", address=" + address +
+                '}';
+    }
 }
