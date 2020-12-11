@@ -1,6 +1,8 @@
 package jpqlPractice;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Member {
@@ -15,8 +17,8 @@ public class Member {
     @JoinColumn(name = "TEAM_ID")
     private Team team;
 
-
-
+    @OneToMany(mappedBy = "member")
+    List<Order> orders = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -48,6 +50,14 @@ public class Member {
 
     public void setTeam(Team team) {
         this.team = team;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 
     @Override

@@ -1,6 +1,9 @@
 package jpqlPractice;
 
+import org.hibernate.annotations.BatchSize;
+
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -13,8 +16,14 @@ public class Team {
     private String name;
 
     @OneToMany(mappedBy = "team")
-    private List<Member> memberList;
+    //@BatchSize(size = 100)
+    private List<Member> memberList = new ArrayList<>();
 
+    // 연관관계 펀의 메소드
+    public void addMemberList(Member member){
+        this.memberList.add(member);
+        member.setTeam(this);
+    }
 
     public Long getId() {
         return id;

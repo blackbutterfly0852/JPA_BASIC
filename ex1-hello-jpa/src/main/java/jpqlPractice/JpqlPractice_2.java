@@ -115,6 +115,7 @@ public class JpqlPractice_2 {
             List<Team> query22List = em.createQuery(sql16, Team.class).getResultList();
             System.out.println("SUBQUERY_6.SIZE() = " + query22List.size());
 
+            // 11. 조건식
 
 
 
